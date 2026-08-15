@@ -1,0 +1,134 @@
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      width: 360px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+      color: #111;
+    }
+
+    .mode-bar {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 1.25rem;
+    }
+
+    .mode-btn {
+      font-size: 13px;
+      padding: 5px 16px;
+      border-radius: 999px;
+      border: 1px solid #ccc;
+      background: transparent;
+      cursor: pointer;
+      color: #555;
+      transition: background 0.15s;
+    }
+
+    .mode-btn.active {
+      background: #eee;
+      color: #111;
+      font-weight: 500;
+    }
+
+    .scoreboard {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 1.5rem;
+    }
+
+    .score-item { text-align: center; }
+
+    .score-label {
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 2px;
+    }
+
+    .score-val {
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .score-x { color: #185FA5; }
+    .score-o { color: #993C1D; }
+    .score-d { color: #aaa; }
+
+    .status {
+      text-align: center;
+      font-size: 15px;
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 1.25rem;
+      min-height: 24px;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 1.25rem;
+    }
+
+    .cell {
+      aspect-ratio: 1;
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+      user-select: none;
+    }
+
+    .cell:hover:not(.taken) {
+      background: #e4e4e4;
+      transform: scale(1.04);
+    }
+
+    .cell.taken { cursor: default; }
+    .cell.x { color: #185FA5; }
+    .cell.o { color: #993C1D; }
+    .cell.win { background: #d4edda; border-color: #a3d9a5; }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    button {
+      font-size: 13px;
+      padding: 7px 18px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background: transparent;
+      cursor: pointer;
+      color: #333;
+      transition: background 0.15s;
+    }
+
+    button:hover { background: #f0f0f0; }
