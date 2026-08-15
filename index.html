@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Tic-Tac-Toe</h1>
+
+  <div class="mode-bar">
+    <button class="mode-btn active" id="btn-pvp" onclick="setMode('pvp')">2 players</button>
+    <button class="mode-btn" id="btn-cpu" onclick="setMode('cpu')">vs computer</button>
+  </div>
+
+  <div class="scoreboard">
+    <div class="score-item">
+      <div class="score-label">X</div>
+      <div class="score-val score-x" id="sx">0</div>
+    </div>
+    <div class="score-item">
+      <div class="score-label">Draw</div>
+      <div class="score-val score-d" id="sd">0</div>
+    </div>
+    <div class="score-item">
+      <div class="score-label">O</div>
+      <div class="score-val score-o" id="so">0</div>
+    </div>
+  </div>
+
+  <div class="status" id="status">X's turn</div>
+
+  <div class="board" id="board"></div>
+
+  <div class="actions">
+    <button onclick="resetGame()">New game</button>
+    <button onclick="resetScore()">Reset score</button>
+  </div>
+</div>
+</body>
+<script src="js/script.js"></script>
+</html>
